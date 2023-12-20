@@ -5,7 +5,7 @@ module.exports = {
     theme: {
         extend: {}
     },
-    plugins: ['postcss-preset-env'],
+    plugins: [],
     corePlugins: {
         preflight: false
     }
