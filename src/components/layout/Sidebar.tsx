@@ -30,9 +30,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isDisplaySidebar: isDisplayMen
             onCollapse={() => setCollapsed((prev) => !prev)}
             width={300}
             className={`
-        h-[100vh] !fixed left-0 bottom-0 top-0 overflow-auto no-scrollbar
-        ${isDisplayMenu ? 'block' : 'hidden'}
-    `}
+                h-[100vh] !fixed left-0 bottom-0 top-0 overflow-auto no-scrollbar bg-red
+                ${isDisplayMenu ? 'block' : 'hidden'}
+            `}
         >
             <Menu mode='inline' defaultSelectedKeys={['1']} defaultOpenKeys={['sub1']} items={items2} />
         </Sider>

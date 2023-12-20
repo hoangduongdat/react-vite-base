@@ -7,6 +7,7 @@
         "dev": "vite --mode development",
         "dev:staging": "vite --mode staging",
         "dev:production": "vite --mode staging",
+        "build": "vite build",
         "build:staging": "vite build --mode staging",
         "build:prod": "vite build --mode production",
         "lint:fix": "eslint --fix src --ext ts,tsx",
