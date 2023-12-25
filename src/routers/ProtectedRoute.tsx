@@ -1,4 +1,4 @@
-import { RootReducerState } from '@/reducers/reducers'
+import { RootStoreState } from '@/reducers/store'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
@@ -9,9 +9,9 @@ type ProtectedRouteProps = {
     permission?: string
 }
 
-const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ permission, children, redirectPath = '/home' }) => {
+const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ permission, children, redirectPath = '/login' }) => {
     const location = useLocation()
-    const { isAuthenticated, user } = useSelector((state: RootReducerState) => state.auth)
+    const { isAuthenticated, user } = useSelector((state: RootStoreState) => state.auth)
 
     const isAllowedPermission = permission ? user?.permissions.includes(permission) : true
 
