@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tailwindcss from 'tailwindcss'
+import postcssNesting from 'tailwindcss/nesting'
 import path from 'path'
+import postcssImport from 'postcss-import'
+import autoprefixer from 'autoprefixer'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +22,7 @@ export default defineConfig({
     css: {
         devSourcemap: true,
         postcss: {
-            plugins: [tailwindcss()]
+            plugins: [postcssImport, postcssNesting, tailwindcss, autoprefixer]
         }
     },
     resolve: {
