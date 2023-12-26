@@ -15,7 +15,7 @@ const LayoutRoot: React.FC<LayoutRootProps> = ({ isDisplaySidebar = true, childr
             <Content>
                 <Layout>
                     <Sidebar isDisplaySidebar={isDisplaySidebar} />
-                    <Content className={`px-6 ${isDisplaySidebar ? 'ml-[300px]' : 'ml-0'}`}>{children}</Content>
+                    <Content className={`${isDisplaySidebar ? 'ml-[300px]' : 'ml-0'}`}>{children}</Content>
                 </Layout>
             </Content>
         </Layout>
